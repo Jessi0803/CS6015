@@ -18,3 +18,8 @@ $(PROGRAM): main.cpp cmdline.cpp expr.cpp expr_test.cpp
 clean:
 	rm -f $(PROGRAM)
 
+# Test rule
+test: $(PROGRAM)
+	./$(PROGRAM) --test
+
+.PHONY: clean test
